@@ -14,57 +14,58 @@
         color: #333;
     }
     .container {
-        max-width: 800px;
+        max-width: 1000px;
         margin: auto;
         background: white;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    .container:hover {
-        transform: translateY(-10px);
+        padding: 30px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
     }
     header {
         background: linear-gradient(to right, #0062E6, #33AEFF);
         color: white;
-        padding: 20px 10px;
+        padding: 30px 20px;
         text-align: center;
-        border-radius: 8px 8px 0 0;
+        border-radius: 10px 10px 0 0;
     }
     h1, h2, h3 {
         margin: 10px 0;
+        font-weight: 600;
     }
     p {
-        line-height: 1.6;
+        line-height: 1.8;
+        font-size: 16px;
     }
     section {
-        margin-top: 20px;
-        margin-bottom: 20px; /* Added bottom margin */
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
-    .services, .projects {
+    .services, .projects, .hardware, .data-science, .student-services {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
-    .service, .project {
-        background: #eee;
+    .service, .project, .hardware-item, .data-item, .student-service {
+        background: #fff;
         padding: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid #ddd;
         border-radius: 8px;
         transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .service:hover, .project:hover {
+    .service:hover, .project:hover, .hardware-item:hover, .data-item:hover, .student-service:hover {
         background: #e1f5fe;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transform: translateY(-5px);
     }
     footer {
         text-align: center;
-        padding: 10px 20px;
+        padding: 20px 20px;
         background: #007bff;
         color: white;
         border-radius: 0 0 8px 8px;
-        margin-top: 20px; /* Ensure spacing between sections and footer */
+        font-size: 16px;
     }
     a {
         color: #007bff;
@@ -82,15 +83,22 @@
         text-decoration: underline;
     }
     .icon {
-        margin-right: 5px;
+        color: #007bff;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+    .detail {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.5;
     }
 </style>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>Unlock Your Project's Potential with Expert Programming Guidance</h1>
-        <p>Professional expertise in Python, JavaScript, TypeScript, C, and C++</p>
+        <h1>Unlock Your Project's Potential</h1>
+        <p>Discover expert programming and development services tailored for success.</p>
     </header>
 
     <section id="services">
@@ -99,40 +107,87 @@
             <div class="service">
                 <i class="fab fa-python icon"></i>
                 <h3>Python Programming</h3>
-                <p>Custom scripts, automation, and data analysis services.</p>
+                <p>Build advanced automation tools and data analysis systems with Python.</p>
             </div>
             <div class="service">
                 <i class="fab fa-js-square icon"></i>
                 <h3>Web Development</h3>
-                <p>Responsive websites using JavaScript, TypeScript, and modern frameworks.</p>
+                <p>Craft modern, responsive websites and web applications using JavaScript and TypeScript.</p>
             </div>
             <div class="service">
                 <i class="fas fa-code icon"></i>
                 <h3>Software Development</h3>
-                <p>Full-stack development for software projects using C, C++, and related tools.</p>
+                <p>Develop robust software solutions with C, C++, and other leading technologies.</p>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>Student Projects</h2>
-        <div class="projects">
-            <div class="project">
+    <section id="hardware">
+        <h2>Hardware Projects</h2>
+        <div class="hardware">
+            <div class="hardware-item">
+                <i class="fas fa-microchip icon"></i>
+                <h3>Raspberry Pi</h3>
+                <p>Design and implement IoT solutions using Raspberry Pi as a versatile computing platform.</p>
+            </div>
+            <div class="hardware-item">
+                <i class="fab fa-usb icon"></i>
+                <h3>Arduino</h3>
+                <p>Develop interactive electronic projects with Arduino for automation and educational purposes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-science">
+        <h2>Data Science Projects</h2>
+        <div class="data-science">
+            <div class="data-item">
+                <i class="fas fa-chart-line icon"></i>
+                <h3>Data Analysis</h3>
+                <p>Leverage advanced statistical techniques and machine learning models to extract insights from big data.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="student-services">
+        <h2>Student Services</h2>
+        <div class="student-services">
+            <div class="student-service">
                 <i class="fas fa-user-graduate icon"></i>
                 <h3>Project Mentorship</h3>
-                <p>Guiding students through their projects with expert advice and code reviews.</p>
+                <p>Guide and support students in their software development journey.</p>
             </div>
-            <div class="project">
+            <div class="student-service">
                 <i class="fas fa-search-plus icon"></i>
                 <h3>Code Review Services</h3>
-                <p>Detailed code analysis to improve and optimize student projects.</p>
+                <p>Enhance code quality and project outcomes through professional code reviews.</p>
+            </div>
+            <div class="student-service">
+                <i class="fas fa-laptop-code icon"></i>
+                <h3>Interactive Workshops</h3>
+                <p>Host interactive coding workshops and bootcamps to teach programming skills in a practical environment.</p>
+            </div>
+            <div class="student-service">
+                <i class="fas fa-graduation-cap icon"></i>
+                <h3>Thesis and Project Guidance</h3>
+                <p>Provide expert advice and supervision for final year projects and theses in computer science and related fields.</p>
+            </div>
+            <div class="student-service">
+                <i class="fas fa-book-open icon"></i>
+                <h3>Educational Content Creation</h3>
+                <p>Create detailed tutorials, guides, and educational content to help students master complex topics.</p>
+            </div>
+            <div class="student-service">
+                <i class="fas fa-chalkboard-teacher icon"></i>
+                <h3>Online Tutoring</h3>
+                <p>Offer personalized tutoring sessions online to help students overcome specific academic challenges in tech subjects.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="contact-info">
-            <p>Contact Info: <a href="mailto:askhamzasajjad@gmail.com">Email Me</a> | <a href="https://wa.me/923261643223">Message on WhatsApp</a></p>
+            <p>Ready to elevate your projects? <a href="mailto:askhamzasajjad@gmail.com">Email Me</a> or <a href="https://wa.me/923261643223">Message on WhatsApp</a> today!</p>
         </div>
     </footer>
 </div>
