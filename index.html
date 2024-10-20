@@ -92,6 +92,39 @@
         color: #666;
         line-height: 1.5;
     }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+        .services, .projects, .hardware, .data-science, .student-services {
+            grid-template-columns: repeat(2, 1fr); /* Adjust grid for tablets */
+            gap: 15px;
+        }
+
+        header, .container {
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-size: 1.5em; /* Smaller headings for smaller screens */
+        }
+
+        p {
+            font-size: 14px; /* Smaller text for readability on smaller devices */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .services, .projects, .hardware, .data-science, .student-services {
+            grid-template-columns: 1fr; /* Stack elements on small screens */
+        }
+
+        h1, h2, h3 {
+            font-size: 1.2em;
+        }
+
+        .icon {
+            font-size: 20px; /* Smaller icons */
+        }
+    }
 </style>
 </head>
 <body>
